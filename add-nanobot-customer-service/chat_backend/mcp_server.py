@@ -10,14 +10,9 @@ if current_dir not in sys.path:
 from rag_tool import read_markdown_docs
 from logging_config.logger import configure_logging, get_logger
 
-# 初始化日誌
-logger = get_logger(__name__)
-configure_logging()
-
-# 1. 初始化 FastMCP Server（移除導致報錯的 dependencies 參數）
+# 1. 初始化 FastMCP Server
 mcp = FastMCP("Nanobot-Customer-Service")
 
-# 2. 將你原本的 RAG 技能註冊為 MCP Tool
 @mcp.tool()
 def search_customer_service_docs(query: str) -> str:
     """
@@ -27,20 +22,24 @@ def search_customer_service_docs(query: str) -> str:
     :param query: 想要查詢的關鍵字或問題描述
     """
     try:
+        # 使用 logger 輸出，確保 logging 內部的 handler 是朝向 sys.stderr
+        logger = get_logger(__name__)
         logger.info(f"MCP 收到查詢請求: {query}")
         
-        # 3. 呼叫原本寫好的 RAG 工具
+        # 呼叫已經修正能接收參數的 RAG 工具
         if hasattr(read_markdown_docs, "invoke"):
-            result = read_markdown_docs.invoke(query)
+            result = read_markdown_docs.invoke({"query": query})
         else:
             result = read_markdown_docs(query)
             
         return str(result)
         
     except Exception as e:
-        logger.error(f"RAG 查詢失敗: {str(e)}")
         return f"查詢文檔時發生錯誤: {str(e)}"
 
 if __name__ == "__main__":
-    # 4. 以標準 stdio 模式啟動
+    # 💡 將初始化日誌移到 main 區塊中，避免全域載入時污染 stdio 管道
+    configure_logging()
+    
+    # 以標準 stdio 模式啟動
     mcp.run(transport="stdio")
