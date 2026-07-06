@@ -1,0 +1,26 @@
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:11:56.771429Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:12:33.861547Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:16:13.666433Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:20:07.007672Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:20:28.912644Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:29:04.911834Z"}
+{"event": "Tool 'ask_customer_service' not listed, no validation will be performed", "level": "warning", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:29:04.913059Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:29:35.054829Z"}
+{"event": "Tool 'ask_customer_service' not listed, no validation will be performed", "level": "warning", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:29:35.055839Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:31:27.604328Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:31:29.603865Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:31:30.404044Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:31:30.598240Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:31:30.759546Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:31:30.907191Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:32:33.586239Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T03:32:45.557045Z"}
+{"event": "read_markdown_docs tool called", "level": "info", "logger": "rag_tool", "timestamp": "2026-06-30T03:32:45.580966Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T04:07:11.929844Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-06-30T04:07:16.916927Z"}
+{"event": "read_markdown_docs tool called", "level": "info", "logger": "rag_tool", "timestamp": "2026-06-30T04:07:16.921457Z"}
+{"event": "Processing request of type SetLevelRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-07-06T03:24:56.047620Z"}
+{"event": "Processing request of type ListToolsRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-07-06T03:25:14.248781Z"}
+{"event": "Processing request of type CallToolRequest", "level": "info", "logger": "mcp.server.lowlevel.server", "timestamp": "2026-07-06T03:28:00.063369Z"}
+{"event": "MCP \u6536\u5230\u67e5\u8a62\u8acb\u6c42: \u904a\u5ba2\u9808\u77e5", "level": "info", "logger": "__main__", "timestamp": "2026-07-06T03:28:00.066922Z"}
+{"event": "read_markdown_docs tool called", "level": "info", "logger": "rag_tool", "timestamp": "2026-07-06T03:28:00.072631Z"}

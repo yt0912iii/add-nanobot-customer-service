@@ -1,0 +1,6 @@
+{
+  "name": "Nanobot Customer Service",
+  "description": "Customer service assistant powered by LangChain and RAG",
+  "version": "0.1.0",
+  "transport": "stdio"
+}
