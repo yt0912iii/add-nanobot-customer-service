@@ -38,8 +38,8 @@ def search_customer_service_docs(query: str) -> str:
         return f"查詢文檔時發生錯誤: {str(e)}"
 
 if __name__ == "__main__":
-    # 💡 將初始化日誌移到 main 區塊中，避免全域載入時污染 stdio 管道
-    configure_logging()
+    # 如果前面註解掉了，可以維持註解，或者確保它不噴到 stdout 即可
+    # configure_logging()
     
-    # 以標準 stdio 模式啟動
-    mcp.run(transport="stdio")
+    # 💡 關鍵修正：加上 banner=False，強行禁止 FastMCP 打印大框框圖案！
+    mcp.run(transport="stdio", banner=False)
