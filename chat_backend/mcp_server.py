@@ -1,6 +1,7 @@
 import os
 import sys
 from fastmcp import FastMCP
+from contextlib import redirect_stdout
 
 # 確保可以正確載入你原本專案的 RAG 工具
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -38,8 +39,9 @@ def search_customer_service_docs(query: str) -> str:
         return f"查詢文檔時發生錯誤: {str(e)}"
 
 if __name__ == "__main__":
-    # 如果前面註解掉了，可以維持註解，或者確保它不噴到 stdout 即可
-    # configure_logging()
-    
-    # 💡 關鍵修正：加上 banner=False，強行禁止 FastMCP 打印大框框圖案！
-    mcp.run(transport="stdio", banner=False)
+    # 💡 終極解法：使用 contextlib.redirect_stdout 將 FastMCP 啟動時亂噴的橫幅
+    # 導向到 sys.stderr（標準錯誤），這樣就不會污染 sys.stdout（標準輸出）的 JSON 管道了！
+    with open(os.devnull, "w") as fnull:
+        with redirect_stdout(fnull):
+            # 移除會報錯的 banner=False，回歸乾淨的 stdio 模式
+            mcp.run(transport="stdio")
